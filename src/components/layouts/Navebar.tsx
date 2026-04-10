@@ -186,20 +186,7 @@ export default function Navbar() {
         </div>
       </header>
 
-      {/* Demo page content so scroll + active states are visible */}
-      <main className="pt-16">
-        {navLinks.map(({ label, href }) => (
-          <section
-            key={label}
-            id={href.replace("#", "")}
-            className="min-h-screen flex items-center justify-center border-b border-border"
-          >
-            <p className="text-4xl font-semibold text-muted-foreground/30 tracking-tight">
-              {label}
-            </p>
-          </section>
-        ))}
-      </main>
+     
     </>
   );
 }
