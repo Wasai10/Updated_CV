@@ -46,7 +46,12 @@ const achievements = [
   },
 ];
 
-function SkillBar({ name, level }) {
+interface SkillBarProps {
+  name: string;
+  level: number;
+}
+
+function SkillBar({ name, level }: SkillBarProps) {
   const [width, setWidth] = useState(0);
   const ref = useRef(null);
 
@@ -84,7 +89,7 @@ export default function Portfolio() {
   return (
     <section
       id="portfolio"
-      className="min-h-screen flex items-center bg-muted/30"
+      className="min-h-screen flex items-center bg-muted/30 border-b border-border/60"
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full py-24">
 
@@ -153,11 +158,11 @@ export default function Portfolio() {
 
             {/* Download */}
             <a
-              href="#"
-              download="Wasai_Mjomba_Resume.pdf"
+              href="/Wasai_Mjomba_CV.pdf"
+              download="Wasai_Mjomba_CV.pdf"
               className="flex items-center justify-center gap-2 w-full py-3 bg-primary text-primary-foreground rounded-xl font-semibold text-sm hover:opacity-90 transition-opacity shadow-md shadow-primary/20"
             >
-              <DownloadIcon /> Download Resume
+              <DownloadIcon /> Download Resume PDF
             </a>
           </div>
 

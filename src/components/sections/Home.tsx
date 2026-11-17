@@ -1,8 +1,16 @@
+const DownloadIcon = () => (
+  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" className="w-4 h-4">
+    <path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4" />
+    <polyline points="7 10 12 15 17 10" />
+    <line x1="12" y1="15" x2="12" y2="3" />
+  </svg>
+);
+
 export default function Home() {
   return (
     <section
       id="home"
-      className="min-h-screen flex items-center relative overflow-hidden bg-background"
+      className="min-h-screen flex items-center relative overflow-hidden bg-background border-b border-border/60"
     >
       {/* Background blobs */}
       <div className="absolute inset-0 pointer-events-none">
@@ -10,15 +18,16 @@ export default function Home() {
         <div className="absolute bottom-1/4 left-1/4 w-64 h-64 bg-primary/8 rounded-full blur-3xl" />
       </div>
 
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full pt-16">
-        <div className="grid lg:grid-cols-2 gap-16 items-center min-h-[calc(100vh-4rem)]">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full py-8 lg:py-12">
+        <div className="grid lg:grid-cols-2 gap-16 items-center">
 
           {/* ── Text ── */}
-          <div className="space-y-8 order-2 lg:order-1">
-            <div className="space-y-2">
-              <p className="text-primary font-medium tracking-widest text-sm uppercase">
-                Hello, World 👋
-              </p>
+          <div className="space-y-7 order-2 lg:order-1">
+            <div className="space-y-3">
+              <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-primary/10 border border-primary/20 text-xs font-semibold text-primary tracking-wide uppercase">
+                <span className="w-2 h-2 rounded-full bg-primary animate-ping" />
+                <span>Open for Opportunities &amp; Freelance</span>
+              </div>
               <h1 className="text-5xl sm:text-6xl lg:text-7xl font-bold text-foreground leading-[1.1] tracking-tight">
                 I'm <span className="text-primary">Wasai</span>
                 <br />Mjomba
@@ -33,15 +42,43 @@ export default function Home() {
               A short <span className="text-foreground font-semibold">5'1</span> girl with a{" "}
               <span className="text-foreground font-semibold">huge personality</span> and an even
               bigger passion for building things on the web. Currently studying IT at KCA University
-              and turning caffeine into code, one project at a time. ☕
+              and turning caffeine into clean, high-performance code. ☕
             </p>
 
-            <div className="flex flex-wrap gap-3">
+            {/* Quick tool badges */}
+            <div className="flex flex-wrap gap-2 pt-1">
+              {[
+                "React",
+                "TypeScript",
+                "JavaScript",
+                "Tailwind CSS",
+                "Node.js",
+                "SQL",
+                "Responsive UI",
+                "Video Editing",
+              ].map((tool) => (
+                <span
+                  key={tool}
+                  className="px-2.5 py-1 text-xs font-medium rounded-lg bg-muted text-muted-foreground border border-border/60 hover:border-primary/40 hover:text-foreground transition-colors"
+                >
+                  {tool}
+                </span>
+              ))}
+            </div>
+
+            <div className="flex flex-wrap gap-3 pt-2">
               <a
                 href="#projects"
                 className="px-6 py-3 bg-primary text-primary-foreground rounded-xl font-semibold text-sm hover:opacity-90 transition-opacity shadow-md shadow-primary/20"
               >
                 See My Work
+              </a>
+              <a
+                href="/Wasai_Mjomba_CV.pdf"
+                download="Wasai_Mjomba_CV.pdf"
+                className="px-6 py-3 border border-primary/30 text-primary hover:bg-primary/10 rounded-xl font-semibold text-sm transition-colors flex items-center gap-2"
+              >
+                <DownloadIcon /> Download CV
               </a>
               <a
                 href="#contact"
@@ -55,7 +92,7 @@ export default function Home() {
             <div className="flex gap-8 pt-2">
               {[
                 ["KCA University", "Currently Enrolled"],
-                ["Frontend", "Main Strength"],
+                ["Frontend & Full Stack", "Core Strength"],
                 ["6+", "Projects Built"],
               ].map(([val, label]) => (
                 <div key={label}>
@@ -75,7 +112,8 @@ export default function Home() {
 
               <div className="relative w-72 h-80 sm:w-80 sm:h-96 rounded-2xl overflow-hidden shadow-2xl">
                 <img
-                  src="https://res.cloudinary.com/dvkt0lsqb/image/upload/v1775479115/20260406_1536_Image_Generation_remix_01knhcn9bbef986exjm0st6kdg_kptkcp.png"
+                 //src="https://res.cloudinary.com/dvkt0lsqb/image/upload/v1775479115/20260406_1536_Image_Generation_remix_01knhcn9bbef986exjm0st6kdg_kptkcp.png"
+                 src="https://res.cloudinary.com/dxeuvtxys/image/upload/v1794906294/portfolio_photo_oyb4rr.jpg"
                   alt="Wasai Mjomba"
                   className="w-full h-full object-cover"
                 />

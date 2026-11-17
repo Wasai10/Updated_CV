@@ -35,14 +35,23 @@ const CloseIcon = () => (
 
 const navLinks = [
   { label: "Home", href: "#home" },
+  { label: "Specializations", href: "#specializations" },
   { label: "Portfolio", href: "#portfolio" },
   { label: "Projects", href: "#projects" },
   { label: "About Me", href: "#about" },
   { label: "Contact", href: "#contact" },
 ];
 
+const DownloadIcon = () => (
+  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" className="w-3.5 h-3.5">
+    <path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4" />
+    <polyline points="7 10 12 15 17 10" />
+    <line x1="12" y1="15" x2="12" y2="3" />
+  </svg>
+);
+
 const socialLinks = [
-  { icon: <GithubIcon />, href: "https://github.com", label: "GitHub" },
+  { icon: <GithubIcon />, href: "https://github.com/Wasai10", label: "GitHub" },
   { icon: <LinkedInIcon />, href: "https://linkedin.com", label: "LinkedIn" },
   { icon: <XIcon />, href: "https://x.com", label: "X" },
 ];
@@ -61,10 +70,10 @@ export default function Navbar() {
   return (
     <>
       <header
-        className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
+        className={`fixed top-0 left-0 right-0 z-50 border-y border-border/60 transition-all duration-300 ${
           scrolled
-            ? "bg-background/80 backdrop-blur-md border-b border-border shadow-sm"
-            : "bg-transparent"
+            ? "bg-background/90 backdrop-blur-md shadow-sm"
+            : "bg-background/70 backdrop-blur-sm"
         }`}
       >
         <nav className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-16 flex items-center">
@@ -72,11 +81,11 @@ export default function Navbar() {
           {/* Logo — left */}
           <a href="#home" className="flex items-center gap-2 flex-shrink-0 group">
             <span className="relative flex h-8 w-8 items-center justify-center rounded-lg bg-primary text-primary-foreground font-bold text-sm transition-transform duration-200 group-hover:scale-105">
-              JD
+              WM
               <span className="absolute inset-0 rounded-lg ring-2 ring-primary/30 ring-offset-1 ring-offset-background opacity-0 group-hover:opacity-100 transition-opacity duration-200" />
             </span>
             <span className="font-semibold text-foreground tracking-tight hidden sm:block">
-              John Doe
+              Wasai Mjomba
             </span>
           </a>
 
@@ -130,6 +139,15 @@ export default function Navbar() {
             {/* Divider */}
             <div className="hidden sm:block w-px h-5 bg-border mx-2" />
 
+            {/* Direct CV Download CTA */}
+            <a
+              href="/Wasai_Mjomba_CV.pdf"
+              download="Wasai_Mjomba_CV.pdf"
+              className="hidden sm:inline-flex items-center gap-1.5 px-3 py-1.5 text-xs font-semibold rounded-lg bg-primary text-primary-foreground hover:opacity-90 shadow-sm transition-opacity"
+            >
+              <DownloadIcon /> CV
+            </a>
+
             {/* Mobile menu toggle */}
             <button
               className="md:hidden p-2 rounded-md text-muted-foreground hover:text-foreground hover:bg-accent transition-colors duration-150"
@@ -168,20 +186,29 @@ export default function Navbar() {
             ))}
           </ul>
 
-          <div className="flex items-center gap-1 px-4 py-3 border-t border-border">
-            <span className="text-xs text-muted-foreground mr-2">Find me on</span>
-            {socialLinks.map(({ icon, href, label }) => (
-              <a
-                key={label}
-                href={href}
-                target="_blank"
-                rel="noopener noreferrer"
-                aria-label={label}
-                className="p-2 rounded-md text-muted-foreground hover:text-foreground hover:bg-accent transition-colors duration-150"
-              >
-                {icon}
-              </a>
-            ))}
+          <div className="flex items-center justify-between gap-2 px-4 py-3 border-t border-border">
+            <div className="flex items-center gap-1">
+              <span className="text-xs text-muted-foreground mr-1">Social:</span>
+              {socialLinks.map(({ icon, href, label }) => (
+                <a
+                  key={label}
+                  href={href}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label={label}
+                  className="p-1.5 rounded-md text-muted-foreground hover:text-foreground hover:bg-accent transition-colors duration-150"
+                >
+                  {icon}
+                </a>
+              ))}
+            </div>
+            <a
+              href="/Wasai_Mjomba_CV.pdf"
+              download="Wasai_Mjomba_CV.pdf"
+              className="inline-flex items-center gap-1.5 px-3 py-1.5 text-xs font-semibold rounded-lg bg-primary text-primary-foreground hover:opacity-90 transition-opacity"
+            >
+              <DownloadIcon /> Download CV
+            </a>
           </div>
         </div>
       </header>

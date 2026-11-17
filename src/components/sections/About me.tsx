@@ -2,7 +2,7 @@ export default function AboutMe() {
   return (
     <section
       id="about"
-      className="min-h-screen flex items-center bg-muted/30"
+      className="min-h-screen flex items-center bg-muted/30 border-b border-border/60"
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full py-24">
 
