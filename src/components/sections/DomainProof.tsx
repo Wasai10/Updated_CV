@@ -1,45 +1,45 @@
 const proofs = [
   {
-    domain: "Full-Stack Development",
-    tag: "Core Focus",
+    domain: "Full-Stack Web Development",
+    tag: "Core Strength",
     description:
-      "Building responsive frontend web interfaces, reusable component systems, and wiring clean data flow from frontend to backend.",
-    skills: ["React", "TypeScript", "JavaScript", "HTML/CSS"],
+      "Engineering full-stack web applications from interactive frontend interfaces to server-side architectures, featuring seamless API communication and responsive user experiences.",
+    skills: ["React.js", "JavaScript", "PHP", "Laravel", "Node.js", "Tailwind CSS"],
   },
   {
-    domain: "Modern UI/UX & Responsive Layouts",
-    tag: "Design & UX",
+    domain: "Backend Engineering & REST APIs",
+    tag: "Backend & Auth",
     description:
-      "Crafting pixel-perfect, accessible, mobile-first layouts with smooth animations, dark/light theme support, and modern aesthetics.",
-    skills: ["Tailwind CSS", "Radix UI", "CSS Grid/Flexbox"],
+      "Developing resilient backend services and REST APIs with PHP, Laravel, Node.js, and Express.js, incorporating secure JWT authentication, route protection, and request handling.",
+    skills: ["PHP", "Laravel", "Node.js", "Express.js", "REST APIs", "JWT Auth"],
   },
   {
-    domain: "Database Modeling & Backend APIs",
-    tag: "Data Layer",
+    domain: "Database Systems & Prisma ORM",
+    tag: "Data Architecture",
     description:
-      "Designing structured database schemas, executing relational SQL queries, and integrating REST API endpoints for persistent web apps.",
-    skills: ["SQL", "Relational Schemas", "Node.js", "REST APIs"],
+      "Designing normalized relational database schemas, managing migrations, executing complex SQL queries, and utilizing Prisma ORM alongside MySQL for reliable persistence.",
+    skills: ["MySQL", "Prisma ORM", "SQL", "Database Design", "Relational Schemas"],
   },
   {
-    domain: "Creative Media & Video Production",
-    tag: "Visual Craft",
+    domain: "AI & Machine Learning Fundamentals",
+    tag: "Emerging Tech",
     description:
-      "Editing engaging short-form and promotional videos, visual pacing, and multimedia content that make tech brands stand out.",
-    skills: ["Video Editing", "Visual Pacing", "Digital Content"],
+      "Grounded in Artificial Intelligence and Machine Learning fundamentals, exploring predictive modeling, intelligent workflows, and emerging automation solutions.",
+    skills: ["AI Fundamentals", "Machine Learning", "Data Logic", "Automation"],
   },
   {
-    domain: "IT Systems & Infrastructure",
-    tag: "Academic Foundation",
+    domain: "Impactful EdTech & Public Systems",
+    tag: "Field-Tested Impact",
     description:
-      "Grounding in computer architecture, networking, database management, and troubleshooting through KCA University's IT curriculum.",
-    skills: ["Networking Basics", "OS Config", "Diagnostics"],
+      "Direct technical experience contributing to national platforms with the Ministry of Education, UNICEF, and Save the Children—including Student Data Verification (SDV) and emergency monitoring.",
+    skills: ["MoE Intern", "UNICEF", "Save the Children", "SDV Platform", "EEMS"],
   },
   {
-    domain: "Disciplined Delivery & Version Control",
-    tag: "Workflow",
+    domain: "Modern Dev Tools & Media Production",
+    tag: "Workflow & Media",
     description:
-      "Structured Git workflows, modular code organization, clear documentation, and rapid problem-solving habits.",
-    skills: ["Git & GitHub", "Component Architecture", "Vite"],
+      "Disciplined version control with Git & GitHub, collaborative workflows, multimedia creation with Canva, digital video editing, and clear technical documentation.",
+    skills: ["Git & GitHub", "Canva", "Video Editing", "Technical Docs", "MS Office"],
   },
 ];
 
@@ -54,9 +54,9 @@ export default function DomainProof() {
           <h2 className="text-3xl sm:text-4xl font-bold text-foreground tracking-tight">
             What I Bring to the Table
           </h2>
-          <p className="text-muted-foreground text-sm max-w-xl mx-auto">
-            Practical skills forged through academic rigor at KCA University and active, hands-on
-            software development.
+          <p className="text-muted-foreground text-sm max-w-2xl mx-auto leading-relaxed">
+            Proficiencies forged through rigorous IT training at KCA University and practical software
+            engineering contributions for the Ministry of Education, UNICEF, and Save the Children.
           </p>
         </div>
 

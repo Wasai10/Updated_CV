@@ -9,40 +9,40 @@ const DownloadIcon = () => (
 );
 
 const skills = [
-  { name: "HTML", level: 90 },
-  { name: "CSS", level: 85 },
-  { name: "JavaScript", level: 72 },
-  { name: "React", level: 68 },
-  { name: "Java", level: 55 },
-  { name: "SQL", level: 60 },
-  { name: "Visual Basic", level: 50 },
-  { name: "Responsive Design", level: 88 },
+  { name: "React.js & JavaScript", level: 90 },
+  { name: "PHP & Laravel", level: 85 },
+  { name: "Node.js & Express.js", level: 82 },
+  { name: "MySQL & Prisma ORM", level: 85 },
+  { name: "HTML5, CSS3 & Tailwind CSS", level: 92 },
+  { name: "REST APIs & JWT Authentication", level: 80 },
+  { name: "AI & Machine Learning Fundamentals", level: 72 },
+  { name: "Git, GitHub & Dev Tools", level: 88 },
 ];
 
 const achievements = [
   {
-    title: "Portfolio Website",
-    desc: "Built a responsive personal portfolio site using HTML & CSS with clean navigation and layouts.",
+    title: "Jet Ministries Website (Flagship Project)",
+    desc: "Built a full-stack ministry website with React, Node.js, Express.js, Prisma ORM, and MySQL featuring responsive design, authentication, events management, and API integration.",
   },
   {
-    title: "Business Landing Page",
-    desc: "Designed a static business website for practice and skill development.",
+    title: "Student Data Verification (SDV)",
+    desc: "Helped develop a student verification system with React, Node.js, and MySQL to identify duplicate/ghost learners and improve national funding accuracy.",
   },
   {
-    title: "Java & Visual Basic",
-    desc: "Developed small programs practicing loops, conditionals, and basic functionality.",
+    title: "Anticipatory Action System",
+    desc: "Developed platform features supporting weather-risk monitoring and incident reporting for schools under the Ministry of Education.",
   },
   {
-    title: "Database & SQL",
-    desc: "Created simple databases and executed SQL queries for data retrieval and updates.",
+    title: "Innovation Workshops — Save the Children",
+    desc: "Participated in technology and innovation workshops focused on developing digital solutions for education and positive community impact.",
   },
   {
-    title: "Excel Data Projects",
-    desc: "Built spreadsheets for tracking and analyzing data using formulas and basic functions.",
+    title: "Database Modeling & Prisma ORM",
+    desc: "Designed structured relational databases, normalization schemas, and persistent queries using MySQL, SQL, and Prisma ORM.",
   },
   {
-    title: "Creative & Video",
-    desc: "Edited short videos and created creative visual content for practice and learning.",
+    title: "Modern Responsive Web Applications",
+    desc: "Engineered responsive web applications and landing pages with clean UI, accessible layouts, and modern CSS/Tailwind frameworks.",
   },
 ];
 
@@ -112,9 +112,9 @@ export default function Portfolio() {
           <div className="bg-background rounded-2xl border border-border p-8 shadow-sm space-y-6">
             <div className="flex items-start justify-between">
               <div>
-                <h3 className="text-xl font-bold text-foreground">Wasai Mjomba</h3>
+                <h3 className="text-xl font-bold text-foreground">Mjomba Agnes Wasai</h3>
                 <p className="text-primary font-medium text-sm mt-0.5">
-                  IT Specialist · Full Stack Developer
+                  Software Developer · Full-Stack Developer · AI &amp; ML
                 </p>
               </div>
               <span className="px-3 py-1 bg-primary/10 text-primary rounded-full text-xs font-semibold">
@@ -123,15 +123,16 @@ export default function Portfolio() {
             </div>
 
             <p className="text-muted-foreground text-sm leading-relaxed">
-              Motivated IT student with foundational skills in frontend development, programming,
-              databases, networking, and digital design. Eager to apply technical knowledge and
-              contribute to IT or frontend development teams.
+              Motivated IT student at KCA University with hands-on experience in full-stack development,
+              Artificial Intelligence, and Machine Learning fundamentals. Proficient in React, Node.js,
+              PHP, Laravel, JavaScript, HTML, CSS, SQL, MySQL, Prisma ORM, and Git. Completed internships
+              with the Ministry of Education, UNICEF, and Save the Children.
             </p>
 
             {/* Skills */}
             <div>
               <h4 className="font-semibold text-foreground mb-4 text-sm uppercase tracking-wide">
-                Skills
+                Technical Proficiencies
               </h4>
               <div className="space-y-3">
                 {skills.map((s) => (
@@ -143,14 +144,17 @@ export default function Portfolio() {
             {/* Education */}
             <div>
               <h4 className="font-semibold text-foreground mb-3 text-sm uppercase tracking-wide">
-                Education
+                Education &amp; Coursework
               </h4>
               <div className="flex items-start gap-3">
                 <div className="w-2 h-2 rounded-full bg-primary mt-2 flex-shrink-0" />
                 <div>
                   <p className="font-semibold text-foreground text-sm">KCA University</p>
                   <p className="text-muted-foreground text-xs">
-                    IT — Frontend, Databases, Networking · 2024–2026
+                    Diploma in Information Technology (2024 – Present)
+                  </p>
+                  <p className="text-muted-foreground text-xs mt-1">
+                    Relevant Coursework: Software Engineering, Web Development, Databases, Computer Networks, Operating Systems, AI.
                   </p>
                 </div>
               </div>

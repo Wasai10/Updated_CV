@@ -35,13 +35,13 @@ export default function AboutMe() {
               </div>
 
               {/* Fun height badge */}
-              <div className="absolute -top-4 -right-4 bg-background border border-border rounded-2xl px-4 py-3 shadow-lg text-center">
+              <div className="absolute -top-4 -right-4 bg-card border border-border rounded-2xl px-4 py-3 shadow-lg text-center">
                 <div className="text-2xl font-black text-primary">5'1"</div>
                 <div className="text-xs text-muted-foreground font-medium">Tall enough 😄</div>
               </div>
 
               {/* University badge */}
-              <div className="absolute -bottom-4 -left-4 bg-background border border-border rounded-xl px-4 py-2.5 shadow-lg">
+              <div className="absolute -bottom-4 -left-4 bg-card border border-border rounded-xl px-4 py-2.5 shadow-lg">
                 <div className="flex items-center gap-2">
                   <span className="text-lg">🎓</span>
                   <div>
@@ -95,7 +95,7 @@ export default function AboutMe() {
               ].map(([emoji, label]) => (
                 <div
                   key={label}
-                  className="flex items-center gap-3 bg-background rounded-xl border border-border px-4 py-3 hover:border-primary/30 transition-colors"
+                  className="flex items-center gap-3 bg-card rounded-xl border border-border px-4 py-3 hover:border-primary/30 transition-colors"
                 >
                   <span className="text-lg">{emoji}</span>
                   <span className="text-sm font-medium text-foreground">{label}</span>

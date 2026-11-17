@@ -7,7 +7,11 @@ import { ThemeProvider } from "@/components/theme-provider.tsx"
 
 createRoot(document.getElementById("root")!).render(
   <StrictMode>
-    <ThemeProvider>
+    <ThemeProvider
+      defaultTheme="dark"
+      storageKey="portfolio-theme"
+      disableTransitionOnChange={false}
+    >
       <App />
     </ThemeProvider>
   </StrictMode>

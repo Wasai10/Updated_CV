@@ -35,27 +35,32 @@ export default function Home() {
             </div>
 
             <p className="text-xl text-muted-foreground font-medium">
-              Full Stack Developer · IT Student · Creative Technologist
+              Software Developer · Full-Stack Developer · AI &amp; Machine Learning
             </p>
 
             <p className="text-muted-foreground leading-relaxed max-w-md text-base">
               A short <span className="text-foreground font-semibold">5'1</span> girl with a{" "}
               <span className="text-foreground font-semibold">huge personality</span> and an even
-              bigger passion for building things on the web. Currently studying IT at KCA University
-              and turning caffeine into clean, high-performance code. ☕
+              bigger passion for engineering reliable digital solutions. Proficient in React, PHP, Laravel,
+              Node.js, and databases, with hands-on project experience across the Ministry of Education,
+              UNICEF, and Save the Children. 🚀
             </p>
 
             {/* Quick tool badges */}
             <div className="flex flex-wrap gap-2 pt-1">
               {[
-                "React",
-                "TypeScript",
+                "React.js",
+                "PHP",
+                "Laravel",
+                "Node.js",
+                "Express.js",
+                "MySQL",
+                "Prisma ORM",
                 "JavaScript",
                 "Tailwind CSS",
-                "Node.js",
-                "SQL",
-                "Responsive UI",
-                "Video Editing",
+                "REST APIs",
+                "AI & ML",
+                "Git",
               ].map((tool) => (
                 <span
                   key={tool}

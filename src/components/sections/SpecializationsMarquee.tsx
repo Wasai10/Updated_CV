@@ -1,23 +1,22 @@
 export default function SpecializationsMarquee() {
   const items = [
-    "Full-Stack Web Development",
-    "React & TypeScript",
-    "Tailwind CSS & Modern UI",
-    "REST APIs & Node.js",
-    "Database Modeling & SQL",
-    "Responsive & Accessible Design",
-    "Creative Video Editing",
-    "IT Systems & Networking",
+    "Full-Stack Software Development",
+    "React.js & Tailwind CSS",
+    "PHP & Laravel Framework",
+    "Node.js & Express.js",
+    "MySQL & Prisma ORM",
+    "REST APIs & JWT Authentication",
+    "AI & Machine Learning Fundamentals",
+    "EdTech & Student Data Systems",
   ];
 
   return (
-    <section className="border-y border-border/60">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6 sm:py-8">
-        <aside
-          id="specializations"
-          aria-label="Specialization Highlights"
-          className="rounded-2xl border border-border/80 bg-muted/40 py-3 overflow-hidden select-none shadow-xs"
-        >
+    <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-6 sm:pt-8 pb-2">
+      <aside
+        id="specializations"
+        aria-label="Specialization Highlights"
+        className="rounded-2xl border border-border/80 bg-muted/40 py-3 overflow-hidden select-none shadow-xs"
+      >
         <div className="flex items-center">
           {/* Ticker tag */}
           <div className="flex items-center gap-2 pl-4 sm:pl-6 pr-4 border-r border-border/80 text-xs font-bold text-primary tracking-wider uppercase flex-shrink-0 z-10 bg-muted/40">
@@ -46,8 +45,7 @@ export default function SpecializationsMarquee() {
             </div>
           </div>
         </div>
-        </aside>
-      </div>
-    </section>
+      </aside>
+    </div>
   );
 }

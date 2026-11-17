@@ -50,12 +50,12 @@ const projectsList: Project[] = [
     featured: true,
   },
   {
-    title: "Jet Ministry Website",
-    subtitle: "Community & Faith Organization",
-    category: "Web Development",
+    title: "Jet Ministries Website",
+    subtitle: "Flagship Full-Stack Platform",
+    category: "Flagship Full-Stack",
     description:
-      "Modern web platform for Jet Ministry featuring dynamic event calendars, sermon broadcasts, community outreach programs, and member engagement features.",
-    tags: ["Web Development", "Community Platform", "Event Scheduling", "Responsive UI"],
+      "Built a full-stack ministry website with React, Node.js, Express.js, Prisma ORM, and MySQL featuring responsive design, secure authentication, dynamic events management, photo gallery, and backend API integration.",
+    tags: ["React", "Node.js", "Express.js", "Prisma ORM", "MySQL", "REST APIs"],
     image: "/images/projects/jet-ministry.jpg",
     featured: false,
   },
@@ -184,8 +184,8 @@ export default function Projects() {
                 <span
                   className={`absolute top-3 left-3 px-3 py-1 text-xs font-bold rounded-full backdrop-blur-md shadow-sm ${
                     project.featured
-                      ? "bg-amber-500/90 text-amber-950 font-extrabold"
-                      : "bg-background/80 text-foreground border border-border/60"
+                      ? "bg-primary text-primary-foreground font-bold shadow-xs shadow-primary/25"
+                      : "bg-card/90 text-foreground border border-border/80"
                   }`}
                 >
                   {project.category}

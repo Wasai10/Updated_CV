@@ -1,4 +1,5 @@
 import { useState, useEffect } from "react";
+import ThemeToggle from "@/components/ui/ThemeToggle";
 
 const GithubIcon = () => (
   <svg viewBox="0 0 24 24" fill="currentColor" className="w-5 h-5">
@@ -53,7 +54,7 @@ const DownloadIcon = () => (
 
 const socialLinks = [
   { icon: <GithubIcon />, href: "https://github.com/Wasai10", label: "GitHub" },
-  { icon: <LinkedInIcon />, href: "https://linkedin.com", label: "LinkedIn" },
+  { icon: <LinkedInIcon />, href: "https://linkedin.com/in/agnes-mjomba-93258a3a4", label: "LinkedIn" },
   { icon: <XIcon />, href: "https://x.com", label: "X" },
 ];
 
@@ -136,10 +137,13 @@ export default function Navbar() {
             <a
               href="/Wasai_Mjomba_CV.pdf"
               download="Wasai_Mjomba_CV.pdf"
-              className="inline-flex items-center gap-1.5 px-3 py-1.5 text-xs font-semibold rounded-lg bg-primary text-primary-foreground hover:opacity-90 shadow-sm transition-opacity whitespace-nowrap"
+              className="hidden sm:inline-flex items-center gap-1.5 px-3 py-1.5 text-xs font-semibold rounded-lg bg-primary text-primary-foreground hover:opacity-90 shadow-sm transition-opacity whitespace-nowrap"
             >
               <DownloadIcon /> CV
             </a>
+
+            {/* Dark/Light Theme Switcher (Available on all devices) */}
+            <ThemeToggle />
 
             {/* Mobile menu toggle */}
             <button
@@ -179,7 +183,7 @@ export default function Navbar() {
             ))}
           </ul>
 
-          <div className="flex items-center justify-between gap-2 px-4 py-3 border-t border-border">
+          <div className="flex flex-wrap items-center justify-between gap-3 px-4 py-3 border-t border-border">
             <div className="flex items-center gap-1">
               <span className="text-xs text-muted-foreground mr-1">Social:</span>
               {socialLinks.map(({ icon, href, label }) => (
@@ -195,13 +199,17 @@ export default function Navbar() {
                 </a>
               ))}
             </div>
-            <a
-              href="/Wasai_Mjomba_CV.pdf"
-              download="Wasai_Mjomba_CV.pdf"
-              className="inline-flex items-center gap-1.5 px-3 py-1.5 text-xs font-semibold rounded-lg bg-primary text-primary-foreground hover:opacity-90 transition-opacity"
-            >
-              <DownloadIcon /> Download CV
-            </a>
+
+            <div className="flex items-center gap-2">
+              <ThemeToggle showLabel className="h-8 text-xs" />
+              <a
+                href="/Wasai_Mjomba_CV.pdf"
+                download="Wasai_Mjomba_CV.pdf"
+                className="inline-flex items-center gap-1.5 px-3 py-1.5 text-xs font-semibold rounded-lg bg-primary text-primary-foreground hover:opacity-90 transition-opacity"
+              >
+                <DownloadIcon /> CV
+              </a>
+            </div>
           </div>
         </div>
       </header>
