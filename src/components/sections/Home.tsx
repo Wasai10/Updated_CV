@@ -110,7 +110,7 @@ export default function Home() {
               <div className="absolute -inset-4 rounded-3xl border-2 border-primary/20 rotate-3" />
               <div className="absolute -inset-4 rounded-3xl border border-primary/10 -rotate-2" />
 
-              <div className="relative w-72 h-80 sm:w-80 sm:h-96 rounded-2xl overflow-hidden shadow-2xl">
+              <div className="relative w-80 h-[22rem] sm:w-96 sm:h-[30rem] lg:w-[26rem] lg:h-[32rem] rounded-2xl overflow-hidden shadow-2xl">
                 <img
                  //src="https://res.cloudinary.com/dvkt0lsqb/image/upload/v1775479115/20260406_1536_Image_Generation_remix_01knhcn9bbef986exjm0st6kdg_kptkcp.png"
                  src="https://res.cloudinary.com/dxeuvtxys/image/upload/v1794906294/portfolio_photo_oyb4rr.jpg"

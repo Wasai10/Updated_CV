@@ -27,7 +27,8 @@ export default function AboutMe() {
 
               <div className="relative w-72 h-80 rounded-2xl overflow-hidden shadow-xl">
                 <img
-                  src="https://res.cloudinary.com/dvkt0lsqb/image/upload/v1775479115/20260406_1536_Image_Generation_remix_01knhcn9bbef986exjm0st6kdg_kptkcp.png"
+                  //src="https://res.cloudinary.com/dvkt0lsqb/image/upload/v1775479115/20260406_1536_Image_Generation_remix_01knhcn9bbef986exjm0st6kdg_kptkcp.png"
+                 src="https://res.cloudinary.com/dxeuvtxys/image/upload/v1794922465/kca_photo_ptznpp.jpg"
                   alt="Wasai Mjomba"
                   className="w-full h-full object-cover"
                 />
