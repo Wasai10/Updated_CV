@@ -36,6 +36,7 @@ const CloseIcon = () => (
 const navLinks = [
   { label: "Home", href: "#home" },
   { label: "Specializations", href: "#specializations" },
+  { label: "Experience", href: "#experience" },
   { label: "Portfolio", href: "#portfolio" },
   { label: "Projects", href: "#projects" },
   { label: "About Me", href: "#about" },
@@ -76,52 +77,44 @@ export default function Navbar() {
             : "bg-background/70 backdrop-blur-sm"
         }`}
       >
-        <nav className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-16 flex items-center">
+        <nav className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between gap-2 sm:gap-4">
 
           {/* Logo — left */}
-          <a href="#home" className="flex items-center gap-2 flex-shrink-0 group">
+          <a href="#home" className="flex items-center gap-2.5 flex-shrink-0 group">
             <span className="relative flex h-8 w-8 items-center justify-center rounded-lg bg-primary text-primary-foreground font-bold text-sm transition-transform duration-200 group-hover:scale-105">
               WM
               <span className="absolute inset-0 rounded-lg ring-2 ring-primary/30 ring-offset-1 ring-offset-background opacity-0 group-hover:opacity-100 transition-opacity duration-200" />
             </span>
-            <span className="font-semibold text-foreground tracking-tight hidden sm:block">
+            <span className="font-semibold text-foreground tracking-tight hidden sm:block whitespace-nowrap">
               Wasai Mjomba
             </span>
           </a>
 
           {/* Nav links — center */}
-          <ul className="hidden md:flex items-center gap-1 absolute left-1/2 -translate-x-1/2">
+          <ul className="hidden md:flex items-center justify-center gap-1 xl:gap-2 flex-1 min-w-0">
             {navLinks.map(({ label, href }) => (
-              <li key={label}>
+              <li key={label} className="shrink-0">
                 <a
                   href={href}
                   onClick={() => setActive(label)}
-                  className={`relative px-3.5 py-1.5 text-sm font-medium rounded-md transition-colors duration-150 group
-                    ${
-                      active === label
-                        ? "text-primary"
-                        : "text-muted-foreground hover:text-foreground"
-                    }`}
+                  className={`relative px-2.5 xl:px-3 py-1.5 text-xs xl:text-sm font-medium rounded-lg whitespace-nowrap transition-all duration-150 inline-flex items-center justify-center ${
+                    active === label
+                      ? "text-primary bg-primary/10 font-semibold"
+                      : "text-muted-foreground hover:text-foreground hover:bg-accent/60"
+                  }`}
                 >
-                  {/* Active pill background */}
+                  <span className="relative z-10">{label}</span>
                   {active === label && (
-                    <span className="absolute inset-0 rounded-md bg-primary/10" />
-                  )}
-                  {/* Hover background */}
-                  <span className="absolute inset-0 rounded-md bg-accent opacity-0 group-hover:opacity-100 transition-opacity duration-150" />
-                  <span className="relative">{label}</span>
-                  {/* Active dot indicator */}
-                  {active === label && (
-                    <span className="absolute -bottom-0.5 left-1/2 -translate-x-1/2 w-1 h-1 rounded-full bg-primary" />
+                    <span className="absolute -bottom-1 left-1/2 -translate-x-1/2 w-1.5 h-1.5 rounded-full bg-primary" />
                   )}
                 </a>
               </li>
             ))}
           </ul>
 
-          {/* Social links — right */}
-          <div className="flex items-center gap-1 ml-auto">
-            <div className="hidden sm:flex items-center gap-1">
+          {/* Right actions: Social links + CV button */}
+          <div className="flex items-center gap-1 sm:gap-2 shrink-0">
+            <div className="hidden xl:flex items-center gap-1">
               {socialLinks.map(({ icon, href, label }) => (
                 <a
                   key={label}
@@ -129,21 +122,21 @@ export default function Navbar() {
                   target="_blank"
                   rel="noopener noreferrer"
                   aria-label={label}
-                  className="p-2 rounded-md text-muted-foreground hover:text-foreground hover:bg-accent transition-colors duration-150"
+                  className="p-1.5 rounded-md text-muted-foreground hover:text-foreground hover:bg-accent transition-colors duration-150"
                 >
                   {icon}
                 </a>
               ))}
             </div>
 
-            {/* Divider */}
-            <div className="hidden sm:block w-px h-5 bg-border mx-2" />
+            {/* Divider (visible when socials are visible) */}
+            <div className="hidden xl:block w-px h-5 bg-border mx-1" />
 
             {/* Direct CV Download CTA */}
             <a
               href="/Wasai_Mjomba_CV.pdf"
               download="Wasai_Mjomba_CV.pdf"
-              className="hidden sm:inline-flex items-center gap-1.5 px-3 py-1.5 text-xs font-semibold rounded-lg bg-primary text-primary-foreground hover:opacity-90 shadow-sm transition-opacity"
+              className="inline-flex items-center gap-1.5 px-3 py-1.5 text-xs font-semibold rounded-lg bg-primary text-primary-foreground hover:opacity-90 shadow-sm transition-opacity whitespace-nowrap"
             >
               <DownloadIcon /> CV
             </a>
