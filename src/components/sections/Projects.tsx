@@ -56,7 +56,7 @@ const projectsList: Project[] = [
     description:
       "Built a full-stack ministry website with React, Node.js, Express.js, Prisma ORM, and MySQL featuring responsive design, secure authentication, dynamic events management, photo gallery, and backend API integration.",
     tags: ["React", "Node.js", "Express.js", "Prisma ORM", "MySQL", "REST APIs"],
-    image: "/images/projects/jet-ministry.jpg",
+    image: "/images/projects/jet-ministry.png",
     featured: false,
   },
   {
@@ -76,20 +76,20 @@ const projectsList: Project[] = [
     description:
       "Personal developer portfolio built with React 19, TypeScript, and Tailwind CSS v4 to showcase web development projects, IT expertise, and creative media work.",
     tags: ["React 19", "Tailwind CSS v4", "TypeScript", "Vite", "Schema.org"],
-    image: "/images/projects/portfolio-preview.svg",
+    image: "/images/projects/portfolio-preview.png",
     liveUrl: "#home",
     githubUrl: "https://github.com/Wasai10",
     featured: false,
   },
   {
-    title: "Equity Bank Website",
-    subtitle: "equitybank.co.ke",
-    category: "Enterprise Web",
+    title: "AgriSync — Agribusiness Platform",
+    subtitle: "agribusiness.jamradi.com",
+    category: "School Project",
     description:
-      "Engineered web features and modern layout components for Equity Bank's digital presence — serving millions across Africa with clean, accessible, and high-performance UI.",
-    tags: ["HTML5", "CSS3", "JavaScript", "Responsive Design", "Banking UI"],
-    image: "https://equitybank.co.ke/wp-content/uploads/2024/01/EB-Homepage-Hero.jpg",
-    liveUrl: "https://equitybank.co.ke",
+      "A school project developed to remove the gap between farmers and consumers, streamline livestock and poultry operations, and assist farmers in acquiring financial loans.",
+    tags: ["School Project", "AgriTech", "Farmer-to-Consumer", "Agri Loans", "Livestock Operations"],
+    image: "/images/projects/agrisync.jpg",
+    liveUrl: "https://agribusiness.jamradi.com/",
     featured: false,
   },
 ];

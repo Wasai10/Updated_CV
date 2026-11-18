@@ -22,26 +22,26 @@ export default function AboutMe() {
           <div className="flex justify-center">
             <div className="relative">
               {/* Decorative frame */}
-              <div className="absolute -inset-3 rounded-2xl border border-primary/20 -rotate-2" />
-              <div className="absolute -inset-3 rounded-2xl border border-primary/10 rotate-1" />
+              <div className="absolute -inset-4 rounded-3xl border border-primary/20 -rotate-2" />
+              <div className="absolute -inset-4 rounded-3xl border border-primary/10 rotate-1" />
 
-              <div className="relative w-72 h-80 rounded-2xl overflow-hidden shadow-xl">
+              <div className="relative w-80 h-[26rem] sm:w-96 sm:h-[32rem] lg:w-[26rem] lg:h-[34rem] xl:w-[28rem] xl:h-[36rem] rounded-2xl overflow-hidden shadow-2xl">
                 <img
-                  //src="https://res.cloudinary.com/dvkt0lsqb/image/upload/v1775479115/20260406_1536_Image_Generation_remix_01knhcn9bbef986exjm0st6kdg_kptkcp.png"
-                 src="https://res.cloudinary.com/dxeuvtxys/image/upload/v1794922465/kca_photo_ptznpp.jpg"
+                  src="https://res.cloudinary.com/dxeuvtxys/image/upload/v1794922465/kca_photo_ptznpp.jpg"
                   alt="Wasai Mjomba"
-                  className="w-full h-full object-cover"
+                  className="w-full h-full object-cover object-top"
                 />
+                <div className="absolute inset-0 bg-gradient-to-t from-background/30 via-transparent to-transparent pointer-events-none" />
               </div>
 
               {/* Fun height badge */}
-              <div className="absolute -top-4 -right-4 bg-card border border-border rounded-2xl px-4 py-3 shadow-lg text-center">
+              <div className="absolute -top-4 -right-4 bg-card border border-border rounded-2xl px-4 py-3 shadow-lg text-center z-10">
                 <div className="text-2xl font-black text-primary">5'1"</div>
                 <div className="text-xs text-muted-foreground font-medium">Tall enough 😄</div>
               </div>
 
               {/* University badge */}
-              <div className="absolute -bottom-4 -left-4 bg-card border border-border rounded-xl px-4 py-2.5 shadow-lg">
+              <div className="absolute -bottom-4 -left-4 bg-card border border-border rounded-xl px-4 py-2.5 shadow-lg z-10">
                 <div className="flex items-center gap-2">
                   <span className="text-lg">🎓</span>
                   <div>
